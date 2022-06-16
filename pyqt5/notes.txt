@@ -1,0 +1,55 @@
+1. Import sys to shutdown the app when exited
+
+2. import widgets needed such as QApplication, QWidget, and QLabel from QtWidgets
+
+3. Need to make an instance of your QApplication.
+ex. app = QApplication(sys.argv)
+
+4. .setWindowTitle() -> Str that will be at the top of the window 
+
+5. .setGeometry(x,y,w,h) -> The x and y will set where you want the window to display.  The W and H are the width and height of the app window 
+
+6. We use QLabel('str',parent=window) -> This will display text inside our window and we set the text to parent as it will be dispalyed inside of our main window 
+
+7. The .show() method will launch our app window when we run it (paint event)
+
+8. We will also add sys.exit(app.exec()) -> allows you to cleanly exit Python and release memory resources when the application terminates
+
+9. QWidget is the base class for all user interface objects
+These are rectangular-shaped graphical components that you can place on your application’s windows to build the GUI
+
+Widgets also receive mouse clicks, keypresses, and other events from the user, the window system
+(Buttons, labels, line edits, combo boxes and radio buttons)
+
+9.1 You can create a button by using QPushButton (OK, Cancel, Apply, Yes, No, Close)
+
+9.2 Labels allow us to display useful info (QLabel).  They also accept HTML text
+
+9.2 Line Edit -> QLineEdit -> light text in a box to remind users what to enter
+
+9.3 Combo Box -> QComboBox -> Basically a dropdown box
+
+9.4 Radio button -> QRadioButton -> Just a radio button list
+
+10. You can use .resize(), .move() or .resizeEvent() but the most effective way is a layout manager
+
+Layout managers are classes that allow you to size and position your widgets at the places you want them to be on the application’s form
+
+10.1 QHBoxLayout -> arranges widgets horizontally from left to right
+
+10.2 QVBoxLayout -> which arranges widgets vertically, from top to bottom
+
+10.3 QGridLayout -> which arranges widgets into a grid of rows and columns
+
+11. display:
+11.1 .setDisplayText() to set and update the display’s text
+
+.setDisplayText() uses .setText() to set and update the display’s text, and .setFocus() to set the cursor’s focus on the display.
+
+11.2 .displayText() to get the current display’s text
+
+.displayText() is a getter method that returns the display’s current text. When the user clicks on the equals sign (=), the program will use the return value of .displayText() as the math expression to be evaluated
+
+11.3 .clearDisplay() to clear the display’s text
+
+.clearDisplay() sets the display’s text to an empty string ('') so the user can introduce a new math expression
